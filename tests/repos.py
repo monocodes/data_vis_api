@@ -1,7 +1,7 @@
 import requests
 
 # Make an API call and store the response.
-url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
+url = 'https://api.github.com/search/repositories?q=language:go&sort=stars'
 headers = {'Accept': 'application/vnd.github.v3+json'}
 r = requests.get(url, headers=headers)
 print(f"Status code: {r.status_code}")
@@ -15,8 +15,8 @@ print(f"Total repositories: {response_dict['total_count']}")
 repo_dicts = response_dict['items']
 print(f"Repositories returned: {len(repo_dicts)}")
 
-# Examine the first repository.
-repo_dict = repo_dicts[0]
+# Examine the second repository.
+repo_dict = repo_dicts[1]
 
 print("\nSelected information about first repository:")
 print(f"Name: {repo_dict['name']}")

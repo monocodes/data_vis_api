@@ -11,7 +11,10 @@ print(f"Status code: {r.status_code}")
 
 # Process results.
 response_dict = r.json()
+
+# print are results incomplete or not
 print(f"Incomplete results: {response_dict['incomplete_results']}")
+
 repo_dicts = response_dict['items']
 repo_names, stars = [], []
 for repo_dict in repo_dicts:

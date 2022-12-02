@@ -9,7 +9,7 @@ from plotly.graph_objects import Bar
 from plotly import offline
 
 # Make an API call and store the response.
-url = 'https://api.github.com/search/repositories?q=language:lua&sort=stars'
+url = 'https://api.github.com/search/repositories?q=language:swift&sort=stars'
 headers = {'Accept': 'application/vnd.github.v3+json'}
 r = requests.get(url, headers=headers)
 print(f"\nStatus code: {r.status_code}")
@@ -53,7 +53,7 @@ data = [{
 }]
 my_layout = {
     'title': (
-        'Most-Starred Lua Projects on GitHub. '
+        'Most-Starred Swift Projects on GitHub. '
         'Total repositories: '
         f'{response_dict["total_count"]}'),
     'titlefont': {'size': 28},
@@ -70,4 +70,4 @@ my_layout = {
 }
 
 fig = {'data': data, 'layout': my_layout}
-offline.plot(fig, filename='results/TRY IT YOURSELF/lua_repos.html')
+offline.plot(fig, filename='results/TRY IT YOURSELF/swift_repos.html')

@@ -52,7 +52,10 @@ data = [{
     'opacity': 0.6,
 }]
 my_layout = {
-    'title': 'Most-Starred Ruby Projects on GitHub',
+    'title': (
+        'Most-Starred Ruby Projects on GitHub. '
+        'Total repositories: '
+        f'{response_dict["total_count"]}'),
     'titlefont': {'size': 28},
     'xaxis': {
         'title': 'Repository',
